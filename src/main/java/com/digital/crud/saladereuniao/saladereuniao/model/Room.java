@@ -1,18 +1,17 @@
 package com.digital.crud.saladereuniao.saladereuniao.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
+
+@Getter
+@Setter
 @Entity
 @Table(name = "meetingroom")
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Data
 public class Room {
 
     @Id
