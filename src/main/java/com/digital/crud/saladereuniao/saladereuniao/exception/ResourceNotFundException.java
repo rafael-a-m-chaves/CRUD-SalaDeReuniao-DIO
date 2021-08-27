@@ -5,11 +5,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(value = HttpStatus.NOT_FOUND)
-public class ResourceNotFund extends Exception{
+public class ResourceNotFundException extends Exception{
 
     private static final Long serialVersionUID= 1l;
 
-    public ResourceNotFund(String message){
+    public ResourceNotFundException(String message){
         super(message);
     }
 
