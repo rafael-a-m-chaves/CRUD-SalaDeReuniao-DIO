@@ -20,7 +20,7 @@ public class RoomController {
     @Autowired
     private  RoomRepository roomRepository;
 
-    @GetMapping("/rooms")
+    @GetMapping("/room")
     public List<Room> getAllRooms(){
         return  roomRepository.findAll();
     }
@@ -44,7 +44,7 @@ public class RoomController {
                 .orElseThrow(()-> new ResourceNotFundException("Room Not found for this id:: "+roomId));
         room.setName(roomDetails.getName());
         room.setDate(roomDetails.getDate());
-        room.setStarHour(roomDetails.getStarHour());
+        room.setStartHour(roomDetails.getStartHour());
         room.setEndHour(roomDetails.getEndHour());
         final Room updateRoom = roomRepository.save(room);
         return ResponseEntity.ok(updateRoom);
